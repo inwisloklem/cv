@@ -1,0 +1,37 @@
+@font-face
+  font-weight: 300
+  font-style: normal
+  font-family: "Raleway"
+  src: local("Raleway Light"), local("Raleway-Light"), url("../fonts/ralewaylight.woff") format("woff"), url("../fonts/ralewaylight.woff2") format("woff2")
+
+@font-face
+  font-weight: 400
+  font-style: normal
+  font-family: "Raleway"
+  src: local("Raleway Regular"), local("Raleway-Regular"), url("../fonts/ralewayregular.woff") format("woff"), url("../fonts/ralewayregular.woff2") format("woff2")
+
+@font-face
+  font-weight: 500
+  font-style: normal
+  font-family: "Raleway"
+  src: local("Raleway Medium"), local("Raleway-Medium"), url("../fonts/ralewaymedium.woff") format("woff"), url("../fonts/ralewaymedium.woff2") format("woff2")
+
+@font-face
+  font-weight: 600
+  font-style: normal
+  font-family: "Raleway"
+  src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("../fonts/ralewaysemibold.woff") format("woff"), url("../fonts/ralewaysemibold.woff2") format("woff2")
+
+$font = "Raleway", "Arial", sans-serif
+
+font($size, $height = normal, $weight = 200, $transform = none)
+  font-size: $size
+
+  if $weight != 200
+    font-weight: $weight
+
+  if $height != "normal"
+    line-height: $height
+
+  if $transform != "none"
+    text-transform: $transform

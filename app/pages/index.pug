@@ -1,0 +1,35 @@
+doctype html
+
+html(lang = "ru")
+  include parts/head.pug
+
+  body
+    include parts/svg-sprite.pug
+
+    main
+      section.projects
+        ul.projects__list
+          li.projects__item
+            a.projects__link(href = "pink")
+              span.projects__title Промо-сайт мобильного приложения
+            .projects__info Адаптивный · Резиновый · BEM · Pug/Jade · Less · JS · Gulp
+          li.projects__item
+            a.projects__link(href = "mishka")
+              span.projects__title Интернет-магазин игрушек
+            .projects__info Адаптивный · BEM · JS · Sass/Scss · Gulp
+          li.projects__item
+            a.projects__link(href = "medical")
+              span.projects__title Медицинский центр
+            .projects__info Адаптивный · Резиновый · BEM · Pug/Jade · Stylus · JS · Gulp
+          li.projects__item
+            a.projects__link(href = "activebox")
+              span.projects__title Одностраничный шаблон
+            .projects__info Резиновый · BEM · Pug/Jade · Stylus · Gulp
+          li.projects__item
+            a.projects__link(href = "icndy")
+              span.projects__title Интернет-магазин одежды
+            .projects__info Фиксированный · BEM · Pug/Jade · Sass/Scss · Gulp
+          li.projects__item
+            a.projects__link(href = "sedona")
+              span.projects__title Туристический сайт
+            .projects__info Фиксированный · JS
