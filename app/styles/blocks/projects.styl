@@ -37,6 +37,24 @@
 
     transition: opacity 0.2s linear
 
+  &__title
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    display: inline-block
+    padding: 20px
+    background-color: $cornflower-blue
+    transition: border-color 0.4s linear
+
+    @media $desktops
+      position: static
+      padding: 5px 0
+      width: auto
+      border: none
+      border-bottom: 2px solid transparent
+      background-color: transparent
+
   &__item
     position: relative
     flex-basis: 100%
@@ -77,6 +95,16 @@
 
           transition: opacity 0.2s linear
 
+        .projects__title
+          border-color: rgba($white, 95%)
+
+          transition: border-color 0.4s linear
+
+        .projects__link
+          color: rgba($white, 95%)
+
+          transition: color 0.4s linear
+
       &:hover::before
         background-color: rgba($cornflower-blue, 90%)
 
@@ -86,7 +114,7 @@
     position: relative
     z-index: 5
     display: block
-    padding: 28% 0
+    padding: 28.4% 0
     color: $white
     text-decoration: none
     letter-spacing: 2px
@@ -100,34 +128,6 @@
 
     @media $wide-desktop
       font-size: 15px
-
-    .projects__title
-      position: absolute
-      top: 0
-      right: 0
-      left: 0
-      display: inline-block
-      padding: 20px
-      background-color: $cornflower-blue
-      transition: border-color 0.4s linear
-
-      @media $desktops
-        position: static
-        padding: 5px 0
-        width: auto
-        border: none
-        border-bottom: 2px solid transparent
-        background-color: transparent
-
-    &:hover
-      color: rgba($white, 95%)
-
-      transition: color 0.4s linear
-
-      .projects__title
-        border-color: rgba($white, 95%)
-
-        transition: border-color 0.4s linear
 
   for $i in 1..6
     &__item:nth-of-type({$i})
