@@ -1,5 +1,20 @@
 .projects
-  border-bottom: 15px solid $cornflower-blue
+  border-bottom: 15px solid lighten($black, 10%)
+
+  @media $desktops
+    border-color: $cornflower-blue
+
+  &__desktops
+    display: none
+
+    @media $desktops
+      display: inline
+
+  &__adaptive
+    color: rgba($white, 50%)
+
+    @media $desktops
+      display: none
 
   &__list
     display: flex
@@ -8,26 +23,38 @@
     list-style-type: none
 
   &__info
-    position: relative
+    position: absolute
+    right: 0
+    bottom: 0
+    left: 0
     z-index: 10
     padding: 15px
     background-color: lighten($black, 10%)
     color: $white
     letter-spacing: 1px
-    font(12px, 1.5, 500)
+    font(12px, 1.2, 500)
     opacity: 0
 
     transition: opacity 0.2s linear
 
   &__item
     position: relative
-    flex-basis: 33.3%
-    background-position: center top
-    background-size: auto 100%
+    flex-basis: 100%
+    background-position: center top 58px
+    background-size: 100% auto
     background-repeat: no-repeat
     text-align: center
 
     transition: background-size 0.25s linear
+
+    @media $desktops
+      background-position: center top
+
+    @media $medium-desktop
+      flex-basis: 50%
+
+    @media $wide-desktop
+      flex-basis: 33.3%
 
     &::before
       position: absolute
@@ -39,39 +66,58 @@
 
       transition: background-color 0.25s linear
 
-    &:hover
-      background-size: auto 105%
+    @media $desktops
+      &:hover
+        background-size: 105% auto
 
-      transition: background-size 0.4s linear
+        transition: background-size 0.4s linear
 
-      .projects__info
-        opacity: 1
+        .projects__info
+          opacity: 1
 
-        transition: opacity 0.2s linear
+          transition: opacity 0.2s linear
 
-    &:hover::before
-      background-color: rgba($cornflower-blue, 90%)
+      &:hover::before
+        background-color: rgba($cornflower-blue, 90%)
 
-      transition: background-color 0.2s linear
+        transition: background-color 0.2s linear
 
   &__link
     position: relative
     z-index: 5
     display: block
-    padding: 30% 0
-    color: transparent
+    padding: 28% 0
+    color: $white
     text-decoration: none
     letter-spacing: 2px
-    font(16px, 1.5, 600, uppercase)
+    font(13px, 1.5, 600)
 
     transition: color 0.4s linear
 
-    .projects__title
-      display: inline-block
-      padding: 10px 0
-      border-bottom: 2px solid transparent
+    @media $desktops
+      color: transparent
+      font-size: 14px
 
+    @media $wide-desktop
+      font-size: 15px
+
+    .projects__title
+      position: absolute
+      top: 0
+      right: 0
+      left: 0
+      display: inline-block
+      padding: 20px
+      background-color: $cornflower-blue
       transition: border-color 0.4s linear
+
+      @media $desktops
+        position: static
+        padding: 5px 0
+        width: auto
+        border: none
+        border-bottom: 2px solid transparent
+        background-color: transparent
 
     &:hover
       color: rgba($white, 95%)
