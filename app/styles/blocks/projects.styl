@@ -43,9 +43,12 @@
     right: 0
     left: 0
     display: inline-block
-    padding: 20px
+    padding: 10px 5px
     background-color: $cornflower-blue
     transition: border-color 0.4s linear
+
+    @media $tablets
+      padding: 20px 5px
 
     @media $desktops
       position: static
@@ -58,12 +61,15 @@
   &__item
     position: relative
     flex-basis: 100%
-    background-position: center top 58px
+    background-position: center top 36px
     background-size: 100% auto
     background-repeat: no-repeat
     text-align: center
 
     transition: background-size 0.25s linear
+
+    @media $tablets
+      background-position: center top 58px
 
     @media $desktops
       background-position: center top
@@ -114,15 +120,20 @@
     position: relative
     z-index: 5
     display: block
-    padding: 28.4% 0
+    padding: 34.7% 0
     color: $white
     text-decoration: none
     letter-spacing: 2px
-    font(13px, 1.5, 600)
+    font(11px, 1.5, 600)
 
     transition: color 0.4s linear
 
+    @media $tablets
+      padding: 32% 0
+      font-size: 13px
+
     @media $desktops
+      padding: 28% 0
       color: transparent
       font-size: 14px
 
