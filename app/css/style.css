@@ -38,12 +38,51 @@ figure,
 ul {
   padding: 0;
 }
+.contacts {
+  min-height: 100px;
+}
+.contacts__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  list-style-type: none;
+}
+.contacts__item--telegram {
+  margin-left: auto;
+}
+.contacts__item--skype,
+.contacts__item--github {
+  margin-left: 10px;
+}
+.contacts__item:hover .contacts__link {
+  opacity: 0.4;
+  transition: opacity 0.2s linear;
+}
+.contacts__link {
+  outline: none;
+  color: #6195ed;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: opacity 0.2s linear;
+}
+.container {
+  margin: auto;
+  padding: 0 20px;
+  max-width: 1240px;
+}
 .projects {
-  border-bottom: 15px solid #1a1a1a;
+  border-bottom: 10px solid #1a1a1a;
 }
 @media (min-width: 920px) {
   .projects {
-    border-color: #6195ed;
+    border-color: #dfeafb;
+    border-top-width: 10px;
+    border-top-style: solid;
   }
 }
 .projects__desktops {

@@ -1,0 +1,33 @@
+.contacts
+  min-height: 100px
+
+  &__list
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    height: 100px
+    list-style-type: none
+
+  &__item
+    &--telegram
+      margin-left: auto
+
+    &--skype
+    &--github
+      margin-left: 10px
+
+    &:hover
+      .contacts__link
+        opacity: 0.4
+
+        transition: opacity 0.2s linear
+
+  &__link
+    outline: none
+    color: $cornflower-blue
+    text-decoration: none
+    letter-spacing: 2px
+    font(14px, 1.5, 600)
+
+    transition: opacity 0.2s linear

@@ -6,6 +6,14 @@ html(lang = "ru")
   body
     include parts/svg-sprite.pug
 
+    header
+      section.contacts.container
+        ul.contacts__list
+          li.contacts__item: a.contacts__link(href = "mailto:89099109104@mail.ru") Написать мне письмо
+          li.contacts__item.contacts__item--telegram: a.contacts__link(href = "https://telegram.me/meowmeowmeow", target = "_blank") Telegram
+          li.contacts__item.contacts__item--skype: a.contacts__link(href = "skype:live:lofwyhr") Skype
+          li.contacts__item.contacts__item--github: a.contacts__link(href = "https://github.com/inwisloklem", target = "_blank") GitHub
+
     main
       section.projects
         ul.projects__list
